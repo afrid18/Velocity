@@ -1,0 +1,27 @@
+{
+  "name": "velocity",
+  "version": "1.0.0",
+  "description": "A nodejs automatic file executer on save. Automatically compiles or interprets a given file and shows the output in the preferred $EDITOR",
+  "main": "./bin/velocity.js",
+  "type": "module",
+  "bin": {
+    "velocity": "./bin/velocity.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "velocity",
+    "velocity-cli",
+    "programming-server",
+    "server",
+    "file-change",
+    "watch-file-change"
+  ],
+  "author": "Afrid Hussain",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.5.1"
+  }
+}
