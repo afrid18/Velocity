@@ -6,7 +6,7 @@ A fast automatic file executer on file change!
 
 ## TO DO's 
 
-- [ ] Arguments parsing
+- [x] Arguments parsing
 - [ ] Watching the file for changes
 - [ ] Working with the commands specific to file (cpp, c, python, javascript)
 - [ ] Exiting the app on pressing q
