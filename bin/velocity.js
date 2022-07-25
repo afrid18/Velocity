@@ -10,15 +10,12 @@ show the result in the vim(default) window
 
 *********************************************************************************/
 
-import fs from 'fs';
-import path from 'path';
-import yargs from 'yargs';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-console.log(__filename);
-const __dirname = path.dirname(__filename);
-console.log(__dirname);
+import fs from 'fs';                                                    // NodeJS File System
+import path from 'path';                                                // NodeJS Path
+import yargs from 'yargs';                                              // yargs module to parse arguments
+import { fileURLToPath } from 'url';                                    // fileURLToPath converts path to system specific 
+const __filename = fileURLToPath(import.meta.url); // path of velocity under the bin directory
+const __dirname = path.dirname(__filename);        // path of bin directory
 
 
 // Implementing now for only one file, ignoring all the remaining files
