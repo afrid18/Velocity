@@ -1,7 +1,7 @@
 <h1 align="center"> Velocity </h1>
 
 <p align='center'>
-A fast automatic file executer on file change!
+A fast automatic file executor on file change!
 </p>
 
 ## TO DO's 
