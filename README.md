@@ -1,4 +1,6 @@
-<img align='center' src="./images/velocity-logo.png"/>
+<p align='center'>
+  <img align='center' src="./images/velocity-logo.png"/>
+</p>
 <h1 align="center"> Velocity </h1>
 
 <p align='center'>
