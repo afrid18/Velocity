@@ -14,6 +14,7 @@ import fs from 'fs';                                                    // NodeJ
 import path from 'path';                                                // NodeJS Path
 import yargs from 'yargs';                                              // yargs module to parse arguments
 import { fileURLToPath } from 'url';                                    // fileURLToPath converts path to system specific 
+import chalk from 'chalk';
 const __filename = fileURLToPath(import.meta.url); // path of velocity under the bin directory
 const __dirname = path.dirname(__filename);        // path of bin directory
 
@@ -26,16 +27,22 @@ const argv = yargs(process.argv.slice(2))
   })
   .demandOption(["filename"], "Please pass the file to watch over")
   .help().argv;
-const fileName = argv.filename;
-
-// looking for the valid file !
-
-const filePath = process.cwd();
-fs.readFile(path.resolve(filePath, fileName), 'utf-8', (err, data) => {
-  console.log(data);
-});
+const fileName = argv.filename;                                         // filename given by the user
+const cwd = process.cwd();                                              // current working directory
+const filePath = path.resolve(cwd, fileName);                           // resolved path (Different path structures are managed by resolve method of path module)
 
 
-
+// checking for the file existance
+console.log("Checking for the file and read access...")
+try {
+  fs.accessSync(filePath, fs.constants.R_OK);
+  console.log(chalk.greenBright("File found: ", filePath));
+  console.log(chalk.greenBright(filePath, ": has read access..."));
+} catch (err) {
+  console.log(chalk.red("File:", "./" + fileName, "Not found"));
+  console.log(chalk.red("Exiting the process...\n"));
+  process.exitCode = 1;
+  process.exit();
+}
 
 
