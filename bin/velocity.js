@@ -15,6 +15,8 @@ import path from 'path' // NodeJS Path
 import yargs from 'yargs' // yargs module to parse arguments
 import { fileURLToPath } from 'url' // fileURLToPath converts path to system specific
 import chalk from 'chalk' // for coloring of text
+
+import { detectFileType } from "./../index.js";
 const __filename = fileURLToPath(import.meta.url) // path of velocity under the bin directory
 const __dirname = path.dirname(__filename) // path of bin directory
 
@@ -44,4 +46,5 @@ try {
   process.exit()
 }
 
-console.log('Starting the file watchover:', './' + fileName)
+console.log("Detecting the file type...");
+console.log("filetype:", detectFileType(filePath));

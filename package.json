@@ -2,13 +2,17 @@
   "name": "velocity",
   "version": "1.0.0",
   "description": "A nodejs automatic file executer on save. Automatically compiles or interprets a given file and shows the output in the preferred $EDITOR",
-  "main": "./bin/velocity.js",
+  "main": "./index.js",
   "type": "module",
+  "bugs": {
+    "url": "https://github.com/afrid18/Velocity/issues"
+  },
   "bin": {
     "velocity": "./bin/velocity.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "standard": "standard --fix"
   },
   "keywords": [
     "cli",
@@ -19,13 +23,20 @@
     "file-change",
     "watch-file-change"
   ],
-  "author": "Afrid Hussain",
+  "author": {
+    "name": "Afrid Hussain",
+    "email": "afridhussain.d@gmail.com",
+    "url": "https://afridhussain.me"
+  },
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.1",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
     "standard": "^17.0.0"
   }
 }
