@@ -10,6 +10,7 @@ A fast automatic file executor on file change!
 ## TO DO's 
 
 - [x] Arguments parsing
+- [x] Detect filetype
 - [ ] Watching the file for changes
 - [ ] Working with the commands specific to file (cpp, c, python, javascript)
 - [ ] Exiting the app on pressing q
