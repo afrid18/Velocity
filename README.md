@@ -4,6 +4,7 @@
 <h1 align="center"> Velocity </h1>
 
 <p align='center'>
+<img src="./images/velocity-demo.gif" />
 A fast automatic file executor on file change!
 </p>
 
