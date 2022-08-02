@@ -1,6 +1,6 @@
 {
   "name": "@afrid18/velocity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A nodejs automatic file executer on save. Automatically compiles or interprets a given file and shows the output in the preferred $EDITOR",
   "main": "./index.js",
   "type": "module",
