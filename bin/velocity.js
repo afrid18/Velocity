@@ -30,7 +30,7 @@ const argv = yargs(process.argv.slice(2))
   })
   .option('input', {
     alias: 'i',
-    description: "input for program"
+    description: 'input for program'
   })
   .demandOption(['filename'], 'Please pass the file to watch over')
   .help().argv
@@ -68,43 +68,40 @@ if (commandExists.sync(extPrograms[fileType])) {
   console.log(chalk.cyan('Found ' + extPrograms[fileType]))
 }
 
-
 // Checking for the input file
-const defaultInputFile = argv.input === undefined ? false : true
+const defaultInputFile = argv.input !== undefined
 if (defaultInputFile) {
-  console.log("Looking for input file:", argv.input)
-  if (fs.existsSync(path.resolve(process.cwd(), argv.input))) console.log("File exists!")
+  console.log('Looking for input file:', argv.input)
+  if (fs.existsSync(path.resolve(process.cwd(), argv.input))) console.log('File exists!')
   else {
-    console.log(chalk.red("Input file", argv.input, "doesn't exists!"))
-    process.exit(1);
+    console.log(chalk.red('Input file', argv.input, "doesn't exists!"))
+    process.exit(1)
   }
-}
-else {
-  console.log(chalk.yellow("No input file provided"))
+} else {
+  console.log(chalk.yellow('No input file provided'))
 }
 
 // Defining a commandLineInstruction
 const commandLineInstruction = command(extPrograms[fileType], fileName, argv.input)
 console.log(commandLineInstruction)
 
-
 // watching file asynchronously
 fs.watchFile(filePath, { interval: 25, bigint: true }, (curr, prev) => {
   console.clear()
-  console.log(chalk.blue("Detected file changes"))
-  console.log(chalk.greenBright("=>", commandLineInstruction))
+  console.log(chalk.blue('Detected file changes'))
+  console.log(chalk.greenBright('=>', commandLineInstruction))
   exec(commandLineInstruction, (error, stdout, stderr) => {
     if (error) {
-      console.log(chalk.red("Error occured!"))
-      console.log(error.message);
-      return;
+      console.log(chalk.red('Error occured!'))
+      console.log(error.message)
+      return
     }
     if (stderr) {
-      console.log(chalk.yellow("stderr!"))
+      console.log(chalk.yellow('stderr!'))
       console.log(stderr)
-      return;
+      return
     }
-    console.log(chalk.cyan("stdout:"))
+    console.log(chalk.cyan('stdout:'))
     console.log(stdout)
   })
 })
@@ -114,8 +111,8 @@ const stdin = process.stdin
 stdin.setRawMode(true)
 stdin.resume()
 stdin.setEncoding('utf8')
-console.log("Press q or Q to exit")
-stdin.on('data', function(key) {
+console.log('Press q or Q to exit')
+stdin.on('data', function (key) {
   if (key === '\u0071' /* q */ || key === '\u0051' /* Q */ || key === '\u0003' /* ctrl + c */) {
     process.exit()
   }

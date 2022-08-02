@@ -15,10 +15,9 @@ export const extPrograms = {
   '.js': 'node'
 }
 
-
-export const command = (program, executableFile, inputFile = "") => {
+export const command = (program, executableFile, inputFile = '') => {
   const executableFileName = executableFile.split('.').slice(0, -1).join('.')
-  const inputLiteral = inputFile === "" ? "" : ` < ${inputFile}`
+  const inputLiteral = inputFile === '' ? '' : ` < ${inputFile}`
   switch (program) {
     case 'gcc':
     case 'g++':

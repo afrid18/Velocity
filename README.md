@@ -1,12 +1,28 @@
 <p align='center'>
-  <img align='center' src="./images/velocity-logo.png"/>
+  <img align='center' src="https://ibb.co/L6ygB9W"/>
 </p>
 <h1 align="center"> Velocity </h1>
 
 <p align='center'>
-<img src="./images/velocity-demo.gif" />
+<img src="https://ibb.co/KLYg1Ym" />
 A fast automatic file executor on file change!
 </p>
+
+# Installation
+
+### using npm
+
+```sh
+npm install -g @afrid18/velocity
+```
+
+### using npx
+
+```sh
+npx @afrid18/velocity
+```
+
+
 
 ## TO DO's 
 
