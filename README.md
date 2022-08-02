@@ -1,10 +1,10 @@
 <p align='center'>
-  <img align='center' src="https://ibb.co/L6ygB9W"/>
+  <img align='center' src="https://i.ibb.co/k0TDzqf/velocity-logo.png"/>
 </p>
 <h1 align="center"> Velocity </h1>
 
 <p align='center'>
-<img src="https://ibb.co/KLYg1Ym" />
+<img src="https://i.ibb.co/yYDC3DV/velocity-demo.gif" />
 A fast automatic file executor on file change!
 </p>
 
