@@ -5,7 +5,7 @@
 Author: Afrid Hussain
 email: afridhussain dot d at gmail dot com
 
-Velocity is a CLI tool to compile or interpret the C, C++, Python, JS file and
+Velocity is a CLI tool to compile or interpret the C, C++, Python, JS, Go file and
 show the result in the vim(default) window
 
 *********************************************************************************/
@@ -112,7 +112,7 @@ stdin.setRawMode(true)
 stdin.resume()
 stdin.setEncoding('utf8')
 console.log('Press q or Q to exit')
-stdin.on('data', function (key) {
+stdin.on('data', function(key) {
   if (key === '\u0071' /* q */ || key === '\u0051' /* Q */ || key === '\u0003' /* ctrl + c */) {
     process.exit()
   }
