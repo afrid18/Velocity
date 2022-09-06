@@ -12,7 +12,8 @@ export const extPrograms = {
   '.cpp': 'g++',
   '.CXX': 'g++',
   '.py': 'python3',
-  '.js': 'node'
+  '.js': 'node',
+  '.go': 'go run'
 }
 
 export const command = (program, executableFile, inputFile = '') => {
@@ -28,6 +29,9 @@ export const command = (program, executableFile, inputFile = '') => {
     case 'python3':
     case 'python':
     case 'node':
+      return `${program} ${executableFile} ${inputLiteral}`
+
+    case 'go run':
       return `${program} ${executableFile} ${inputLiteral}`
   }
 }
